@@ -1,3 +1,6 @@
+import random
+
+
 def couting_sort(original_array: list[int]) -> list[int]:
     max_num: int = max(original_array)
     count_array: list[int] = [original_array.count(i) for i in range(0, max_num + 1)]
@@ -18,3 +21,5 @@ def couting_sort(original_array: list[int]) -> list[int]:
 if __name__ == "__main__":
     test_array: list[int] = [4, 3, 6, 2, 3, 4, 7]
     print(couting_sort(test_array))
+    nums: list[int] = [random.randint(0, 10000) for _ in range(10)]
+    print(couting_sort(nums))
